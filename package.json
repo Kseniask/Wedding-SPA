@@ -55,6 +55,7 @@
     "endOfLine": "auto"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/webpack-env": "^1.18.4",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",

@@ -8,15 +8,11 @@ const SaveTheDate = () => {
     const {themeValues} = useContext(GlobalDataContext);
     
     return (
-    <>
         <StFlexBoxContainer>
             <StHeader dangerouslySetInnerHTML={{__html: themeValues.saveTheDateTitleHtml}} />
-        
-        <PictureCollage /></StFlexBoxContainer>
-    </>
-
+        <PictureCollage />
+        </StFlexBoxContainer>
     )
 } 
-
 
 export default SaveTheDate;
