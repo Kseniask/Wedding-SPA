@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a {
+  font-weight: 500;
+  color: grey;
+}
+
+a:hover {
+  color: rgb(86, 86, 86);
+}
+
+/* define custom fonts */
+@font-face {
+  font-family: 'Lustria';
+  src: local('Lustria'), url(../public/fonts/Lustria-Regular.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BirthstoneBounce';
+  src: local('BirthstoneBounce'), url(../public/fonts/BirthstoneBounce-Regular.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PurplePurse';
+  src: local('PurplePurse'), url(../public/fonts/PurplePurse-Regular.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
