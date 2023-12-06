@@ -15,7 +15,7 @@ return (
     <>
         <StHeader marginBottom="0" letterSpacing="8px">{themeValues.brideGroomName}</StHeader>
         <StCursiveText fontSize="40px" opacity="70%">{themeValues.gettingMarried}</StCursiveText>
-        <StFlexBoxContainer flexDirection="row" gap="50px" opacity="75%" height="50px !important">
+        <StFlexBoxContainer flexDirection="row" gap="50px" opacity="75%" height="50px !important" overflow="hidden">
             <StLineImage src={Line}/>
             <StImage src={HeartDivider} />
             <StLineImage src={Line}/>
