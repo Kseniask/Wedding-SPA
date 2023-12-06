@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { FlexProps, MarginProps, flex, margin } from "styled-system";
+import { FlexProps, MarginProps, OverflowProps, flex, margin, overflow } from "styled-system";
 interface StFlexBoxContainerProps {
     flexDirection?: string;
     gap?: string;
@@ -7,7 +7,7 @@ interface StFlexBoxContainerProps {
     height?: string;
 }
 
-const StFlexBoxContainer = styled.div<StFlexBoxContainerProps & MarginProps>`
+const StFlexBoxContainer = styled.div<StFlexBoxContainerProps & MarginProps & OverflowProps>`
     display: flex;
     max-width: 1200px;
     width: 100%;
@@ -19,5 +19,6 @@ const StFlexBoxContainer = styled.div<StFlexBoxContainerProps & MarginProps>`
     ${props => props.height ? `height: ${props.height};`: ""}
 
     ${margin}
+    ${overflow}
 `;
 export default StFlexBoxContainer;
