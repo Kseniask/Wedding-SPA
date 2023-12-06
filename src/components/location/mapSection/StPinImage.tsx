@@ -13,5 +13,13 @@ const StPinImage = styled.img`
         width: 60px;
         height: 60px; 
     }
+
+    @media (max-width: 1050px) {
+        top: 40%;
+    }
+
+    @media (max-width: 913px) {
+        top: 35%;
+    }
 `;
 export default StPinImage;

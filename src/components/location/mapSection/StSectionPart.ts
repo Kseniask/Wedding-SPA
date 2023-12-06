@@ -9,11 +9,12 @@ const StSectionPart = styled.div<StSectionPartProp>`
     background-color: #F7F3F0;
     position:relative;
     height: 300px;
-    ${(props) => props.overflow ? `overflow: ${props.overflow}` : ''}
-    ${(props) => props.position ? `position: ${props.position}` : ''}
+    ${(props) => props.overflow ? `overflow: ${props.overflow};` : ''}
+    ${(props) => props.position ? `position: ${props.position};` : ''}
 
     @media (max-width: 913px){
         width: 100%;
+        overflow: hidden;
     }
 `;
 export default StSectionPart;
