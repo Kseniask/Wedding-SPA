@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MaxHeightProps, MinWidthProps, OpacityProps, SizeProps, maxHeight, minWidth, opacity, size } from "styled-system";
 
-interface StImageProps {
+export interface StImageProps {
     height?: string;
     width?: string;
     opacity?: string;

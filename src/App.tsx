@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-import StDiv from './shared/styled/StDiv'
 import SaveTheDate from './components/SaveTheDate';
 import GlobalDataProvider from './context/GlobalDataProvider';
 import Location from './components/Location'
 import StFlexBoxContainer from './shared/styled/StFlexBoxContainer';
+import Countdown from './components/Countdown';
 
 function App () {
   return (
@@ -12,6 +12,7 @@ function App () {
     <GlobalDataProvider>
       <SaveTheDate/>
       <Location />
+      <Countdown />
     </GlobalDataProvider>
   </StFlexBoxContainer>
   )

@@ -3,4 +3,5 @@ export default interface Theme {
     brideGroomName: string;
     gettingMarried: string;
     location: string;
+    countdown: string;
 }
