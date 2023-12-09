@@ -6,7 +6,7 @@ interface StHeaderProps {
 const StHeader = styled.h1<MarginProps & StHeaderProps>`
     flex:1;
     font-family: Lustria;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 100;
     letter-spacing: ${(props) => props.letterSpacing || "6px"};
     

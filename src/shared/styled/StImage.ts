@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MaxHeightProps, MinWidthProps, OpacityProps, SizeProps, maxHeight, minWidth, opacity, size } from "styled-system";
+import { SizeProps, size } from "styled-system";
 
 export interface StImageProps {
     height?: string;

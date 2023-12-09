@@ -10,6 +10,9 @@ export const themeEnglish: Theme = {
  gettingMarried: "are getting married",
  location:"NEW WESTMINSTER, BC, CANADA",
  countdown: "COUNTDOWN",
+ colorPalette: "DRESS CODE",
+ formal: "formal",
+ dressCodeMessage: "We invite guests to dress in our <br> color palette for cohesive photos"
 }
 
 export const themeUkrainian: Theme = {
@@ -18,4 +21,7 @@ export const themeUkrainian: Theme = {
  gettingMarried: "одружуються",
  location: "НЬЮ ВЕСТМІНСТЕР, Британська Колумбія, Канада",
  countdown: " Залиштлось ще трошки",
+ colorPalette: "ДРЕС-КОД",
+ formal: "формальний",
+ dressCodeMessage: "Будь ласка, оберіть одяг у нашій кольоровій гамі для гармонійних фотографій. Дякуємо!"
 }

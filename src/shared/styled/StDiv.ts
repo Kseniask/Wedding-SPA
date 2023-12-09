@@ -12,6 +12,7 @@ const StDiv = styled.div<PositionProps & BackgroundProps & ColorProps & SpacePro
   ${justifyContent}
   ${flexbox}
   color: ${colors.fontColor};
+  text-align: center;
 `
 
 export default StDiv

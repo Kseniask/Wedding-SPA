@@ -6,6 +6,7 @@ import Location from './components/Location'
 import StFlexBoxContainer from './shared/styled/StFlexBoxContainer';
 import Countdown from './components/Countdown';
 import Schedule from './components/Schedule';
+import ColorPalette from './components/ColorPalette';
 
 function App () {
   return (
@@ -14,7 +15,8 @@ function App () {
       <SaveTheDate/>
       <Location />
       <Countdown />
-      <Schedule /> 
+      <Schedule />
+      <ColorPalette />
     </GlobalDataProvider>
   </StFlexBoxContainer>
   )

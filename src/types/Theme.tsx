@@ -4,4 +4,7 @@ export default interface Theme {
     gettingMarried: string;
     location: string;
     countdown: string;
+    colorPalette: string;
+    formal: string;
+    dressCodeMessage: string;
 }
