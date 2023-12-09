@@ -9,7 +9,7 @@ const Countdown = () => {
     const {themeValues} = useContext(GlobalDataContext);
     
     return (
-        <StFlexBoxContainer>
+        <StFlexBoxContainer margin="50px 0">
             <StHeader>{themeValues.countdown}</StHeader>
             <Clock />
         </StFlexBoxContainer>
