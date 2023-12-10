@@ -48,13 +48,13 @@ const RsvpForm = ({setIsMessageSent} : RsvpFormProps) => {
     >
       {({ handleSubmit, values }) => (<Form>
         <StDiv display="flex" className="rsvp-form-container" position="relative">
-            <StDiv flex={1}>
+            <StDiv flex={1} id='radio-group'>
                 <StErrorMessage name="attending" component="div" className="input-error"/>
                 <RadioField value="yes" text="YES!" subText="We can make it" />
-                <RadioField value="no" text="No." subText="Sorry, we can't"/>
+                <RadioField value="no" text="No." subText="Sorry, we can't" />
             </StDiv>
             <StVerticalLine />
-            <StDiv flex={2}>
+            <StDiv flex={2} id="form-group">
                 <InputField label='Number of Guests:*' name="numberOfGuests" width="250px"/>
                 <InputField label="Guest's Name:*" name="guestName" width="370px"/>
                 <InputField label="Song Request:" name="songRequest" width="370px"/>

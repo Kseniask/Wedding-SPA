@@ -8,6 +8,10 @@ const StVerticalLine = styled.div`
   left: 30%;
   width: 2px;
   background-color: ${colorSystem.lineColor};
+  
+  @media (max-width: 913px) {
+    display: none;
+  }
 `;
 
 export default StVerticalLine;

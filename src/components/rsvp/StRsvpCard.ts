@@ -27,5 +27,30 @@ const StRsvpCard = styled.div`
             font-size: 30px;
         }
     }
+
+    @media (max-width: 913px) {
+        .rsvp-form-container {
+            flex-direction: column;
+        }
+
+        #radio-group {
+            display: flex; 
+            > div {
+                flex: 1;
+                margin: auto;
+                 > div {
+                    width: 30px;
+                 }
+            }
+        }
+
+        #form-group {
+            margin-top: 50px;
+        }
+
+        input {
+            width: 90%;
+        }
+    }
 `
 export default StRsvpCard;
