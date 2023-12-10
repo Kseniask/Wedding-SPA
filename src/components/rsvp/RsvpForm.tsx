@@ -8,6 +8,7 @@ import StVerticalLine from './form/styled/StVerticalLine';
 import InputField from './form/InputField';
 import StRsvpButton from './form/styled/StRsvpButton';
 import StErrorMessage from './form/styled/StErrorMessage';
+import { SendEmail } from '../../shared/services/EmailService';
 
 const validationSchema = Yup.object().shape({
   attending: Yup.string().required("Response is required"),
@@ -22,18 +23,28 @@ const initialValues = {
   songRequest: '',
 };
 
-const RsvpForm = () => {
-const onSubmit = (values: RsvpFormValues) => {
-  // Handle form submission here
-  console.log(values);
-};
+interface RsvpFormProps {
+  setIsMessageSent: (isSent: boolean) => void
+}
+
+const RsvpForm = ({setIsMessageSent} : RsvpFormProps) => {
+  const onSubmit = async (values: RsvpFormValues) => {
+    try {
+      await SendEmail(values);  
+      setIsMessageSent(true);
+    } catch (e: any) {
+      alert("Unable to send email, sorry. Try again later")
+      console.log("Unable to sent email: ", e.message)
+    }
+  };
+
   return (
     <Formik<RsvpFormValues>
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {({ handleSubmit }) => (<Form>
+      {({ handleSubmit, values }) => (<Form>
         <StDiv display="flex" className="rsvp-form-container" position="relative">
             <StDiv flex={1}>
                 <StErrorMessage name="attending" component="div" className="input-error"/>

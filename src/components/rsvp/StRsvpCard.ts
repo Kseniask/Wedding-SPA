@@ -20,13 +20,11 @@ const StRsvpCard = styled.div`
     }
     .rsvp-title {
         font-size: 50px;
-        letter-spacing: 5px;
         color: ${colorSystem.defaultColorLight};
         line-height: 40px;
         span {
             font-family: 'AlexBrush';
             font-size: 30px;
-            letter-spacing: 0;
         }
     }
 `

@@ -1,7 +1,7 @@
-// webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -39,9 +39,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'), // Specify the path to your index.html file
+      template: path.resolve(__dirname, 'public', 'index.html'),
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new Dotenv(),
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),

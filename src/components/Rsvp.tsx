@@ -16,7 +16,7 @@ const [isMessageSent, setIsMessageSent] = useState(false);
         <StRsvpCard>
             <img src={Branch} className="branch" alt="branch" />
             <StDiv className='rsvp-title' marginBottom="70px"><span>Kindly</span><br/>Respond</StDiv>
-            <RsvpForm />
+            <RsvpForm setIsMessageSent={setIsMessageSent}/>
         </StRsvpCard>
     </StRsvpContainer>
   )
