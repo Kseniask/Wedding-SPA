@@ -16,6 +16,7 @@ const StText = styled.p<MarginProps & StTextProps>`
     font-weight: 100;
     margin: 8px;
     letter-spacing: ${(props) => props.letterSpacing || "0"};
+    text-align: center;
     ${(props) => props.opacity ? `opacity: ${props.opacity};`: ""}
     ${(props) => props.isLink ? "cursor: pointer;" : ""}
     ${(props) => props.lineHeight ? `lineHeight: ${props.lineHeight};` : ""}

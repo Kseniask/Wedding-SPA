@@ -13,5 +13,14 @@ const StResponseSentMessageContainer = styled.div`
         font-family: 'AlexBrush';
         font-size: 70px;
     }
+
+    @media (max-width: 550px) {
+        font-size: 20px;
+        height: 120px;
+        
+        span {
+            font-size: 40px;
+        }
+    }
 `
 export default StResponseSentMessageContainer;

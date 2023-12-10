@@ -8,7 +8,6 @@ import HeartDivider from "../../images/HeartDivider.png";
 import StFlexBoxContainer from "../../shared/styled/StFlexBoxContainer";
 import StLineImage from "./introSection/StLineImage";
 import StText from "../../shared/styled/StText";
-import StDiv from "../../shared/styled/StDiv";
 
 const IntroHeader = () => {
     const {themeValues} = useContext(GlobalDataContext);

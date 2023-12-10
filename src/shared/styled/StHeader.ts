@@ -11,6 +11,7 @@ const StHeader = styled.h1<MarginProps & StHeaderProps>`
     font-size: ${(props) => props.fontSize ||"27px"};
     font-weight: 100;
     letter-spacing: ${(props) => props.letterSpacing || "6px"};
+    text-align: center;
     ${(props) => props.color ? `color: ${props.color};`: '' }
     
     .cursive {
