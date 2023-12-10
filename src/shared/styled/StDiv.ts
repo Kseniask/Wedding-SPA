@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {PositionProps, BackgroundProps, position, ColorProps, SpaceProps, LayoutProps, TypographyProps, space, layout, color, background, typography, justifyContent, JustifyContentProps, FlexboxProps, flexbox} from 'styled-system'
-import { colors } from '../constants'
+import { colorSystem } from '../constants'
 
 const StDiv = styled.div<PositionProps & BackgroundProps & ColorProps & SpaceProps & LayoutProps & TypographyProps & JustifyContentProps & FlexboxProps>`
   ${position}
@@ -11,7 +11,7 @@ const StDiv = styled.div<PositionProps & BackgroundProps & ColorProps & SpacePro
   ${typography}
   ${justifyContent}
   ${flexbox}
-  color: ${colors.fontColor};
+  color: ${colorSystem.fontColor};
   text-align: center;
 `
 

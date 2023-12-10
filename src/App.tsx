@@ -7,6 +7,7 @@ import StFlexBoxContainer from './shared/styled/StFlexBoxContainer';
 import Countdown from './components/Countdown';
 import Schedule from './components/Schedule';
 import ColorPalette from './components/ColorPalette';
+import QnA from './components/QnA';
 
 function App () {
   return (
@@ -17,6 +18,7 @@ function App () {
       <Countdown />
       <Schedule />
       <ColorPalette />
+      <QnA />
     </GlobalDataProvider>
   </StFlexBoxContainer>
   )

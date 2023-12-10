@@ -1,9 +1,5 @@
 import Theme from "../types/Theme";
 
-export const colors ={
-    "fontColor" : "#675858"
-}
-
 export const themeEnglish: Theme = {
  saveTheDateTitleHtml: 'SAVE <span class="cursive">the</span> DATE',
  brideGroomName: "IRYNA & VOLODYMYR",
@@ -12,7 +8,8 @@ export const themeEnglish: Theme = {
  countdown: "COUNTDOWN",
  colorPalette: "DRESS CODE",
  formal: "formal",
- dressCodeMessage: "We invite guests to dress in our <br> color palette for cohesive photos"
+ dressCodeMessage: "We invite guests to dress in our <br> color palette for cohesive photos",
+ qna: "Q&A"
 }
 
 export const themeUkrainian: Theme = {
@@ -23,5 +20,11 @@ export const themeUkrainian: Theme = {
  countdown: " Залиштлось ще трошки",
  colorPalette: "ДРЕС-КОД",
  formal: "формальний",
- dressCodeMessage: "Будь ласка, оберіть одяг у нашій кольоровій гамі для гармонійних фотографій. Дякуємо!"
+ dressCodeMessage: "Будь ласка, оберіть одяг у нашій кольоровій гамі для гармонійних фотографій. Дякуємо!",
+ qna: "Запитання"
 }
+
+export const colorSystem = { defaultBackgroundColor : "#F7F3F0",
+defaultColorLight: "#968E8E",
+fontColor: "#675858",
+borderColor: "#e4e0db"}
