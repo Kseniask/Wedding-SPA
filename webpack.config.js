@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -40,6 +41,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'), // Specify the path to your index.html file
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),

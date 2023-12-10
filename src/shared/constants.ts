@@ -32,4 +32,6 @@ export const themeUkrainian: Theme = {
 export const colorSystem = { defaultBackgroundColor : "#F7F3F0",
 defaultColorLight: "#968E8E",
 fontColor: "#675858",
-borderColor: "#e4e0db"}
+borderColor: "#e4e0db",
+lineColor:"#d9d9d9",
+}

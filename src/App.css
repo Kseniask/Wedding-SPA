@@ -1,7 +1,8 @@
 body {
   margin: 0;
   min-width: 320px;
-  color: #675858
+  color: #675858;
+  font-family: 'AbhayaLibre';
 }
 
 a {
@@ -31,6 +32,19 @@ a:hover {
 @font-face {
   font-family: 'PurplePurse';
   src: local('PurplePurse'), url(../public/fonts/PurplePurse-Regular.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AlexBrush';
+  src: local('AlexBrush'), url(../public/fonts/AlexBrush-Regular.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AbhayaLibre';
+  src: local('AbhayaLibre'), url(../public/fonts/AbhayaLibre-Regular.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
 }
