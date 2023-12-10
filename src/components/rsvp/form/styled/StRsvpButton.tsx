@@ -13,6 +13,7 @@ align-items: center;
 background-color: #F9F8F8;
 border-radius: 3px;
 margin: 60px auto 0 auto;
+cursor: pointer;
 `
 
 export default StRsvpButton;

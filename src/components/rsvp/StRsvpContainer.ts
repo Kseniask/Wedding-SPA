@@ -1,15 +1,18 @@
 import styled from "styled-components";
-import { colorSystem } from "../../shared/constants";
 
-const StRsvpContainer = styled.div`
+interface StRsvpContainerProps {
+    height?: string;
+}
+
+const StRsvpContainer = styled.div<StRsvpContainerProps>`
 position: relative;
-height: 1200px;
+height: ${props => props.height || "1200px"};
 top:0;
 
 .final-image {
     width:100vw;
     opacity: 65%;
-    margin: 40px 0;
+    margin-top: 40px;
 }
 
 .closing-message {

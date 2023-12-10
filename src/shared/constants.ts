@@ -2,7 +2,6 @@ import Theme from "../types/Theme";
 import questions_en from "../types/questions.json" 
 import questions_ua from "../types/questions-ukr.json" 
 
-
 export const themeEnglish: Theme = {
  saveTheDateTitleHtml: 'SAVE <span class="cursive">the</span> DATE',
  brideGroomName: "IRYNA & VOLODYMYR",
@@ -35,3 +34,5 @@ fontColor: "#675858",
 borderColor: "#e4e0db",
 lineColor:"#d9d9d9",
 }
+
+export const hasRespondedKey = "hasResponded";

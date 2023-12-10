@@ -7,7 +7,7 @@ import { RsvpFormValues } from '../../types/RsvpFormValues';
       attending: formData.attending.toLocaleUpperCase(),
       "number-of-guests": formData.numberOfGuests,
       "guests-name": formData.guestName,
-      "song-request": formData.songRequest && formData.songRequest.length >0?`Song request: ${formData.songRequest};`: '',
+      "song-request": formData.songRequest && formData.songRequest.length >0?`Song request: ${formData.songRequest}`: '',
     };
     await emailjs.send(
       'service_y26k1lt',

@@ -9,6 +9,7 @@ import InputField from './form/InputField';
 import StRsvpButton from './form/styled/StRsvpButton';
 import StErrorMessage from './form/styled/StErrorMessage';
 import { SendEmail } from '../../shared/services/EmailService';
+import { hasRespondedKey } from '../../shared/constants';
 
 const validationSchema = Yup.object().shape({
   attending: Yup.string().required("Response is required"),
@@ -32,6 +33,7 @@ const RsvpForm = ({setIsMessageSent} : RsvpFormProps) => {
     try {
       await SendEmail(values);  
       setIsMessageSent(true);
+      localStorage.setItem(hasRespondedKey, 'true');
     } catch (e: any) {
       alert("Unable to send email, sorry. Try again later")
       console.log("Unable to sent email: ", e.message)
