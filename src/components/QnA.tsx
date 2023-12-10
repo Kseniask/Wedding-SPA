@@ -4,7 +4,7 @@ import StHeader from "../shared/styled/StHeader";
 import GlobalDataContext from "../context/GlobalDataContext";
 import StQnAContainer from "./qna/StQnAContainer";
 import { colorSystem } from "../shared/constants";
-import questions from "./qna/questions.json";
+import Question from "../types/Question";
 
 const QnA =() => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -18,7 +18,7 @@ return (
             <StHeader fontSize="40px" color={colorSystem.defaultColorLight}>{themeValues.qna}</StHeader>
             <StQnAContainer>
                 <div className="accordion">
-                    {questions.map((item, index) => (
+                    {themeValues.questions.map((item: Question, index: number) => (
                         <div className="accordion-item" key={index}>
                             <div className={`accordion-question ${activeIndex === index ? 'active' : ''}`} onClick={() => toggleAccordion(index)}>
                                 {item.question}

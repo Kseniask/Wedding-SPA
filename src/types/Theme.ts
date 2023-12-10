@@ -1,3 +1,5 @@
+import Question from "./Question";
+
 export default interface Theme {
     saveTheDateTitleHtml: string;
     brideGroomName: string;
@@ -7,5 +9,6 @@ export default interface Theme {
     colorPalette: string;
     formal: string;
     dressCodeMessage: string;
-    qna:string;
+    qna: string;
+    questions: Question[];
 }
