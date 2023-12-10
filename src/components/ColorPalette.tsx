@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import StImage from "../shared/styled/StImage";
-import colorPalette from '../images/colorPalette.png'
+import colorPalette from '../images/colorPalette.png';
 import StFlexBoxContainer from "../shared/styled/StFlexBoxContainer";
 import StHeader from "../shared/styled/StHeader";
 import GlobalDataContext from "../context/GlobalDataContext";
