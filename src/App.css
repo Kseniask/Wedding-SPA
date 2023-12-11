@@ -20,6 +20,7 @@ a:hover {
   src: local('Lustria'), url(../public/fonts/Lustria-Regular.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -27,6 +28,7 @@ a:hover {
   src: local('BirthstoneBounce'), url(../public/fonts/BirthstoneBounce-Regular.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -34,6 +36,7 @@ a:hover {
   src: local('PurplePurse'), url(../public/fonts/PurplePurse-Regular.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'AlexBrush';
@@ -47,4 +50,5 @@ a:hover {
   src: local('AbhayaLibre'), url(../public/fonts/AbhayaLibre-Regular.ttf) format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }

@@ -1,17 +1,19 @@
 import FlipDown from '../../scripts/flipdown/FlipDown';
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import '../../scripts/flipdown/flipdown.css'
 import StFlipdownContainer from './StFlipdownContainer';
+import GlobalDataContext from '../../context/GlobalDataContext';
 
 const Clock = () => {
-    const flipdownRef = useRef<FlipDown | null>(null);
-    useEffect(() => {
-if (!flipdownRef.current) {
-    // Set up FlipDown
-    flipdownRef.current = new FlipDown(1718455668)
-      .start();
-}
-  }, []);
+  const { hasRenderedCountdown, setHasRenderedCountdown } = useContext(GlobalDataContext);
+
+  useEffect(() => {
+    if (!hasRenderedCountdown) {
+      setHasRenderedCountdown(true);
+      // Set up FlipDown
+      new FlipDown(1718455668).start();
+    }
+}, [hasRenderedCountdown]);
 
   return (
       <StFlipdownContainer id="flipdown" className="flipdown" />

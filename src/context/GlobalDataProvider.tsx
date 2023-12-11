@@ -11,6 +11,7 @@ interface GlobalDataProviderProps {
 const GlobalDataProvider = ({children}:GlobalDataProviderProps) => {
     const [theme, setTheme] = useState<ThemeOption>(ThemeOption.English);
     const [themeValues, setThemeValues] = useState<Theme>(themeEnglish);
+    const [hasRenderedCountdown, setHasRenderedCountdown] = useState<boolean>(defaultValues.hasRenderedCountdown);
 
     useEffect(()=>{
         if(theme) {
@@ -19,7 +20,7 @@ const GlobalDataProvider = ({children}:GlobalDataProviderProps) => {
     },[theme])
 
     return (
-        <GlobalDataContext.Provider value={{themeValues, setTheme}}> {children} </GlobalDataContext.Provider>
+        <GlobalDataContext.Provider value={{themeValues, setTheme, hasRenderedCountdown, setHasRenderedCountdown}}> {children} </GlobalDataContext.Provider>
     )
 }
 

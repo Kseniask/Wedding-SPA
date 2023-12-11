@@ -6,13 +6,17 @@ import { themeEnglish } from "../shared/constants";
 export interface GlobalDataState {
     themeValues: Theme;
     setTheme: (theme: ThemeOption) => void
+    hasRenderedCountdown: boolean;
+    setHasRenderedCountdown: (hasRendered: boolean) => void
 }
 const notFoundCallback = () =>{
     throw new Error('Connaot find global data provider int he parent tree')
 }
 export const defaultGlobalDataContextValues = {
     themeValues: themeEnglish,
-    setTheme: notFoundCallback
+    setTheme: notFoundCallback,
+    hasRenderedCountdown: false,
+    setHasRenderedCountdown: notFoundCallback,
 }
 
 export default React.createContext<GlobalDataState>({

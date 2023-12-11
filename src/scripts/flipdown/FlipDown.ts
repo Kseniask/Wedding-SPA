@@ -51,8 +51,6 @@ class FlipDown {
   }
 
   start(): this {
-    console.log('this.initialised',this.initialised);
-    
     if (!this.initialised) {
       this.initialised = true;
       this._init();
@@ -110,12 +108,7 @@ class FlipDown {
   }
 
   private _init(): this {
-    console.log('init called');
-    
     this.initialised = true;
-
-    console.log('this.init', this.initialised);
-    
     if (this._hasCountdownEnded()) {
       this.daysRemaining = 0;
     } else {
