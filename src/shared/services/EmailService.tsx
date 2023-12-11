@@ -13,6 +13,6 @@ import { RsvpFormValues } from '../../types/RsvpFormValues';
       'service_y26k1lt',
       'template_9hptep5',
       templateParams,
-      process.env.REACT_APP_PUBLIC_KEY
+      'fb_gs85Jk9dqgj0oV'
     );
   };
