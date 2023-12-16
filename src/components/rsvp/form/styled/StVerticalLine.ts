@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colorSystem } from "../../../../shared/constants";
+import styled from 'styled-components';
+import { colorSystem } from '../../../../shared/constants';
 
 const StVerticalLine = styled.div`
   position: absolute;
@@ -8,8 +8,8 @@ const StVerticalLine = styled.div`
   left: 30%;
   width: 2px;
   background-color: ${colorSystem.lineColor};
-  
-  @media (max-width: 913px) {
+
+  @media (max-width: 1150px) {
     display: none;
   }
 `;

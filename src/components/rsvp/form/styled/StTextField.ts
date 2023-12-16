@@ -1,17 +1,22 @@
-import { Field } from "formik";
-import styled from "styled-components";
-import { colorSystem } from "../../../../shared/constants";
+import { Field } from 'formik';
+import styled from 'styled-components';
+import { colorSystem } from '../../../../shared/constants';
 
 interface StTextFieldProps {
-    width? :string;
+  width?: string;
 }
 
 const StTextField = styled(Field)<StTextFieldProps>`
-margin-left: 15px;
-border: none;
-border-bottom: 2px solid ${colorSystem.lineColor};
-height: 30px;
-${props => props.width ? `width: ${props.width};` : ''}
-`
+  margin-left: 15px;
+  border: none;
+  border-bottom: 2px solid ${colorSystem.lineColor};
+  height: 30px;
+  ${(props) => (props.width ? `width: ${props.width};` : '')}
+  background-color: unset;
+
+  @media (max-width: 1340px) {
+    width: 50%;
+  }
+`;
 
 export default StTextField;
