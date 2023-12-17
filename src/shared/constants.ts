@@ -26,7 +26,9 @@ export const themeEnglish: Theme = {
   songRequest: 'Song Request:',
   reply: 'Reply',
   countdownHeadings: { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' },
-  messageSent: '<span>Thank you</span><br/>for your response &hearts;',
+  thankYou: 'Thank you',
+  forResponse: 'for your response',
+  sendAnother: 'Send another one',
 };
 
 export const themeUkrainian: Theme = {
@@ -53,7 +55,9 @@ export const themeUkrainian: Theme = {
   songRequest: 'Обіцяю танцювати, якщо включите:',
   reply: 'Дати відповідь',
   countdownHeadings: { days: 'Днів', hours: 'Годин', minutes: 'Хвилин', seconds: 'Секунд' },
-  messageSent: '<span>Дякуємо</span><br/>за вашу відповідь &hearts;',
+  thankYou: 'Дякуємо',
+  forResponse: 'за вашу відповідь',
+  sendAnother: 'Надіслати ще одну відповідь',
 };
 
 export const colorSystem = {

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import StRsvpContainer from './rsvp/StRsvpContainer';
 import finalImage from '../images/DSC_5741.jpg';
 import Branch from '../images/Branch.png';
@@ -10,8 +10,13 @@ import GlobalDataContext from '../context/GlobalDataContext';
 import StResponseSentMessageContainer from './rsvp/StResponseSentMessageContainer';
 
 const Rsvp = () => {
-  const [isMessageSent, setIsMessageSent] = useState(false);
+  const [isMessageSent, setIsMessageSent] = useState(localStorage.getItem(hasRespondedKey) === 'true');
   const { themeValues, selectedLanguage } = useContext(GlobalDataContext);
+
+  const resetHasResponded = () => {
+    localStorage.setItem(hasRespondedKey, 'false');
+    setIsMessageSent(false);
+  };
 
   return (
     <StRsvpContainer height={isMessageSent || localStorage.getItem(hasRespondedKey) === 'true' ? 'auto' : '1200px'}>
@@ -20,9 +25,15 @@ const Rsvp = () => {
       <StRsvpCard fontSize={selectedLanguage && selectedLanguage === Languages.UA.code ? '35px' : '50px'}>
         <img src={Branch} className="branch" alt="branch" />
         {isMessageSent || localStorage.getItem(hasRespondedKey) === 'true' ? (
-          <StResponseSentMessageContainer
-            dangerouslySetInnerHTML={{ __html: themeValues.messageSent }}
-          ></StResponseSentMessageContainer>
+          <StResponseSentMessageContainer>
+            <span>{themeValues.thankYou}</span>
+            <br />
+            {themeValues.forResponse} &hearts;
+            <br />
+            <button id="send-another-response" onClick={resetHasResponded}>
+              {themeValues.sendAnother}
+            </button>
+          </StResponseSentMessageContainer>
         ) : (
           <>
             <StDiv

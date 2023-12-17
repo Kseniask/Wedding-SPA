@@ -24,7 +24,9 @@ export default interface Theme {
   songRequest: string;
   reply: string;
   countdownHeadings: CountdownHeadings;
-  messageSent: string;
+  thankYou: string;
+  forResponse: string;
+  sendAnother: string;
 }
 
 interface CountdownHeadings {
