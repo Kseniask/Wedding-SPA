@@ -33,6 +33,10 @@ const StQnAContainer = styled.div`
     width: 50%;
     margin: 20px auto;
   }
+
+  @media (max-width: 620px) {
+    width: 100%;
+  }
 `;
 
 export default StQnAContainer;

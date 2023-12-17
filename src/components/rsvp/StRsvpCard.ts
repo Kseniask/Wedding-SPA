@@ -33,6 +33,13 @@ const StRsvpCard = styled.div<StRsvpCardProps>`
     }
   }
 
+  #radio-group > div {
+    height: 100%;
+    > div {
+      margin-top: 6px;
+    }
+  }
+
   @media (max-width: 780px) {
     width: auto;
     left: 25px;
@@ -50,23 +57,22 @@ const StRsvpCard = styled.div<StRsvpCardProps>`
       flex-direction: column;
     }
 
+    #form-group input {
+      width: 90%;
+    }
+
     #radio-group {
       display: flex;
       > div {
         flex: 1;
-        margin: auto;
         > div {
-          width: 30px;
+          width: 30px !important;
         }
       }
     }
 
     #form-group {
       margin-top: 50px;
-    }
-
-    input {
-      width: 90%;
     }
   }
 `;
