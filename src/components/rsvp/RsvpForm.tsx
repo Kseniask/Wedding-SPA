@@ -33,7 +33,7 @@ const RsvpForm = ({ setIsMessageSent }: RsvpFormProps) => {
   const { themeValues, selectedLanguage } = useContext(GlobalDataContext);
 
   const onSubmit = async (values: RsvpFormValues) => {
-    console.log('recipient name: ', process.env.RECIPIENT_NAME);
+    console.log('recipient name: ', process.env.REACT_APP_RECIPIENT_NAME);
     try {
       await SendEmail(values);
       setIsMessageSent(true);

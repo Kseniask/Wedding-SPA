@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import StRsvpContainer from './rsvp/StRsvpContainer';
 import finalImage from '../images/DSC_5741.jpg';
 import Branch from '../images/Branch.png';
