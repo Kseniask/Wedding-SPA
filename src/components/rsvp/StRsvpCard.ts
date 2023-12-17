@@ -39,6 +39,14 @@ const StRsvpCard = styled.div<StRsvpCardProps>`
     }
   }
 
+  #form-group {
+    font-size: 25px;
+
+    input {
+      margin-left: 20px;
+    }
+  }
+
   @media (max-width: 780px) {
     width: auto;
     left: 25px;

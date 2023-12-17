@@ -19,11 +19,8 @@ const MainComponent = () => {
   const { selectedLanguage } = useContext(GlobalDataContext);
 
   useEffect(() => {
-    console.log('selectedLanguage', selectedLanguage);
-
     if (selectedLanguage) {
       setShow(false);
-      console.log('setting to false');
       setIsLoading(false);
     } else {
       setIsLoading(false);

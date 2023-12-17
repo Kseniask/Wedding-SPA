@@ -2,9 +2,6 @@ import emailjs from 'emailjs-com';
 import { RsvpFormValues } from '../../types/RsvpFormValues';
 
 export const SendEmail = async (formData: RsvpFormValues) => {
-  console.log(process.env.REACT_APP_SERVICE_ID);
-  console.log(process.env.REACT_APP_TEMPLATE_ID);
-
   const templateParams = {
     attending: formData.attending.toLocaleUpperCase(),
     'number-of-guests': formData.numberOfGuests,

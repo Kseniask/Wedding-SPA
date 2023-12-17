@@ -33,14 +33,12 @@ const RsvpForm = ({ setIsMessageSent }: RsvpFormProps) => {
   const { themeValues, selectedLanguage } = useContext(GlobalDataContext);
 
   const onSubmit = async (values: RsvpFormValues) => {
-    console.log('recipient name: ', process.env.REACT_APP_RECIPIENT_NAME);
     try {
       await SendEmail(values);
       setIsMessageSent(true);
       localStorage.setItem(hasRespondedKey, 'true');
     } catch (e: any) {
       alert('Unable to send email, sorry. Try again later');
-      console.log('Unable to sent email: ', e);
     }
   };
 
