@@ -1,24 +1,25 @@
-import React from "react";
-import { ThemeOption } from "../types/ThemeOption";
-import Theme from "../types/Theme";
-import { themeEnglish } from "../shared/constants";
+import React from 'react';
+import Theme from '../types/Theme';
+import { themeEnglish } from '../shared/constants';
 
 export interface GlobalDataState {
-    themeValues: Theme;
-    setTheme: (theme: ThemeOption) => void
-    hasRenderedCountdown: boolean;
-    setHasRenderedCountdown: (hasRendered: boolean) => void
+  themeValues: Theme;
+  hasRenderedCountdown: boolean;
+  setHasRenderedCountdown: (hasRendered: boolean) => void;
+  selectedLanguage: string | null;
+  setSelectedLanguage: (lang: string) => void;
 }
-const notFoundCallback = () =>{
-    throw new Error('Connaot find global data provider int he parent tree')
-}
+const notFoundCallback = () => {
+  throw new Error('Connot find global data provider in the parent tree');
+};
 export const defaultGlobalDataContextValues = {
-    themeValues: themeEnglish,
-    setTheme: notFoundCallback,
-    hasRenderedCountdown: false,
-    setHasRenderedCountdown: notFoundCallback,
-}
+  themeValues: themeEnglish,
+  hasRenderedCountdown: false,
+  setHasRenderedCountdown: notFoundCallback,
+  selectedLanguage: null,
+  setSelectedLanguage: notFoundCallback,
+};
 
 export default React.createContext<GlobalDataState>({
-    ...defaultGlobalDataContextValues
-})
+  ...defaultGlobalDataContextValues,
+});

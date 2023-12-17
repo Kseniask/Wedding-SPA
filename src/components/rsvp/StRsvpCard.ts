@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { colorSystem } from '../../shared/constants';
 
-const StRsvpCard = styled.div`
+interface StRsvpCardProps {
+  fontSize?: string;
+}
+
+const StRsvpCard = styled.div<StRsvpCardProps>`
   position: absolute;
   top: 50%;
   left: 15%;
@@ -19,11 +23,12 @@ const StRsvpCard = styled.div`
     top: 0;
   }
   .rsvp-title {
-    font-size: 50px;
+    font-size: ${(props) => props.fontSize || '50px'};
     color: ${colorSystem.defaultColorLight};
     line-height: 40px;
+    font-family: Raleway;
     span {
-      font-family: 'AlexBrush';
+      font-family: 'Alex Brush', 'HandwritingCyrillic';
       font-size: 30px;
     }
   }

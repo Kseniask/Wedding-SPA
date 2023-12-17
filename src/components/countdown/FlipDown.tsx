@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import GlobalDataContext from '../../context/GlobalDataContext';
 
 type ClockValues = {
   d: number; // Days
@@ -16,6 +17,7 @@ const FlipDown: React.FC<FlipDownProps> = ({ epoch }) => {
   const [flipped, setFlipped] = useState<string[]>([]); // Store flipped rotor leaf values
   const countdownRef = useRef<NodeJS.Timeout>();
   const previousClockValues = useRef<ClockValues>({ d: 0, h: 0, m: 0, s: 0 });
+  const { themeValues } = useContext(GlobalDataContext);
 
   useEffect(() => {
     const tick = () => {
@@ -91,19 +93,19 @@ const FlipDown: React.FC<FlipDownProps> = ({ epoch }) => {
   return (
     <div className="flipdown">
       <div className="rotor-group">
-        <div className="rotor-group-heading" data-before="Days"></div>
+        <div className="rotor-group-heading" data-before={themeValues.countdownHeadings.days}></div>
         {renderRotors(pad(previousClockValues.current.d), 'd')}
       </div>
       <div className="rotor-group">
-        <div className="rotor-group-heading" data-before="Hours"></div>
+        <div className="rotor-group-heading" data-before={themeValues.countdownHeadings.hours}></div>
         {renderRotors(pad(previousClockValues.current.h), 'h')}
       </div>
       <div className="rotor-group">
-        <div className="rotor-group-heading" data-before="Minutes"></div>
+        <div className="rotor-group-heading" data-before={themeValues.countdownHeadings.minutes}></div>
         {renderRotors(pad(previousClockValues.current.m), 'm')}
       </div>
       <div className="rotor-group">
-        <div className="rotor-group-heading" data-before="Seconds"></div>
+        <div className="rotor-group-heading" data-before={themeValues.countdownHeadings.seconds}></div>
         {renderRotors(pad(previousClockValues.current.s), 's')}
       </div>
     </div>

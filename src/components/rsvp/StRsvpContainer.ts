@@ -16,10 +16,11 @@ const StRsvpContainer = styled.div<StRsvpContainerProps>`
   }
 
   .closing-message {
+    color: #453434;
     position: absolute;
-    top: 37%;
-    font-family: 'AlexBrush';
-    color: white;
+    top: 45%;
+    width: max-content;
+    font-family: 'Alex Brush', 'HandwritingCyrillic';
     font-size: 5.8vw;
     left: 50%;
     transform: translate(-50%, -50%);

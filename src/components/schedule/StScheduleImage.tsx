@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { SizeProps } from "styled-system";
+import styled from 'styled-components';
+import { SizeProps } from 'styled-system';
 
-const StScheduleImage = styled.img<SizeProps> `
+const StScheduleImage = styled.img<SizeProps>`
   width: 100%;
-  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: 3%;
-`
+`;
 
 export default StScheduleImage;

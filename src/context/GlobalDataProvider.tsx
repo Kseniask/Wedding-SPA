@@ -1,27 +1,38 @@
-import React, { ReactNode, useEffect, useState } from "react";
-import { ThemeOption } from "../types/ThemeOption";
-import GlobalDataContext, {defaultGlobalDataContextValues as defaultValues} from "./GlobalDataContext";
-import { themeEnglish, themeUkrainian } from "../shared/constants";
-import Theme from "../types/Theme";
+import React, { ReactNode, useEffect, useState } from 'react';
+import GlobalDataContext, { defaultGlobalDataContextValues as defaultValues } from './GlobalDataContext';
+import { Languages, selectedLanguageKey, themeEnglish, themeUkrainian } from '../shared/constants';
+import Theme from '../types/Theme';
 
 interface GlobalDataProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-const GlobalDataProvider = ({children}:GlobalDataProviderProps) => {
-    const [theme, setTheme] = useState<ThemeOption>(ThemeOption.English);
-    const [themeValues, setThemeValues] = useState<Theme>(themeEnglish);
-    const [hasRenderedCountdown, setHasRenderedCountdown] = useState<boolean>(defaultValues.hasRenderedCountdown);
+const GlobalDataProvider = ({ children }: GlobalDataProviderProps) => {
+  const [themeValues, setThemeValues] = useState<Theme>(themeEnglish);
+  const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+  const [hasRenderedCountdown, setHasRenderedCountdown] = useState<boolean>(defaultValues.hasRenderedCountdown);
 
-    useEffect(()=>{
-        if(theme) {
-            setThemeValues(theme === ThemeOption.English ? themeEnglish: themeUkrainian )
-        }
-    },[theme])
+  useEffect(() => {
+    if (selectedLanguage) {
+      setThemeValues(selectedLanguage === Languages.EN.code ? themeEnglish : themeUkrainian);
+    } else {
+      setSelectedLanguage(localStorage.getItem(selectedLanguageKey));
+    }
+  }, [selectedLanguage]);
 
-    return (
-        <GlobalDataContext.Provider value={{themeValues, setTheme, hasRenderedCountdown, setHasRenderedCountdown}}> {children} </GlobalDataContext.Provider>
-    )
-}
+  return (
+    <GlobalDataContext.Provider
+      value={{
+        themeValues,
+        hasRenderedCountdown,
+        setHasRenderedCountdown,
+        selectedLanguage,
+        setSelectedLanguage,
+      }}
+    >
+      {children}
+    </GlobalDataContext.Provider>
+  );
+};
 
 export default GlobalDataProvider;

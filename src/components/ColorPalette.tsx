@@ -14,7 +14,7 @@ const ColorPalette = () => {
     <StFlexBoxContainer margin="50px 0">
       <StDiv opacity="70%" textAlign="center">
         <StHeader margin="0">{themeValues.colorPalette}</StHeader>
-        <StText fontFamily="BirthstoneBounce" fontSize="35px" margin="0">
+        <StText fontFamily="Birthstone Bounce, HandwritingCyrillic" fontSize="35px" margin="0">
           {themeValues.formal}
         </StText>
         <StText
