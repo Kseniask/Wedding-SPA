@@ -3,7 +3,7 @@ import { PositionProps, position } from 'styled-system';
 
 const StDateItem = styled.div<PositionProps>`
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   right: 0.5em;
   color: white;
   line-height: 60%;

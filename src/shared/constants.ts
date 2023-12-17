@@ -26,6 +26,7 @@ export const themeEnglish: Theme = {
   songRequest: 'Song Request:',
   reply: 'Reply',
   countdownHeadings: { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' },
+  messageSent: '<span>Thank you</span><br/>for your response &hearts;',
 };
 
 export const themeUkrainian: Theme = {
@@ -39,19 +40,20 @@ export const themeUkrainian: Theme = {
   dressCodeMessage: 'Будь ласка, оберіть одяг у нашій кольоровій гамі для гармонійних фотографій. Дякуємо!',
   qna: 'Запитання',
   questions: questions_ua,
-  ceremony: 'Церемонія',
+  ceremony: 'Церемонія розпису',
   celebration: 'Святкування',
   closingMessage: 'З нетерпінням чекаємо на вас!',
   kindlyRespond: '<span>Будь ласка</span> <br />дайте відповідь',
   yes: 'ТАК',
   subTextYes: 'Ми зможемо',
   no: 'Ні',
-  subTextNo: 'Нажаль не вийде',
+  subTextNo: 'На жаль не вийде',
   numberOfGuests: 'Кількість гостей:*',
   guestNames: 'Імена гостей:*',
   songRequest: 'Обіцяю танцювати, якщо включите:',
   reply: 'Дати відповідь',
   countdownHeadings: { days: 'Днів', hours: 'Годин', minutes: 'Хвилин', seconds: 'Секунд' },
+  messageSent: '<span>Дякуємо</span><br/>за вашу відповідь &hearts;',
 };
 
 export const colorSystem = {

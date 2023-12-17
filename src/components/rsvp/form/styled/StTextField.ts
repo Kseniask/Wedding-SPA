@@ -7,15 +7,16 @@ interface StTextFieldProps {
 }
 
 const StTextField = styled(Field)<StTextFieldProps>`
+  width: 90%;
   margin-left: 15px;
   border: none;
   border-bottom: 2px solid ${colorSystem.lineColor};
-  height: 30px;
+  height: 40px;
   ${(props) => (props.width ? `width: ${props.width};` : '')}
   background-color: unset;
 
-  @media (max-width: 1340px) {
-    width: 50%;
+  &:focus {
+    outline: unset;
   }
 `;
 

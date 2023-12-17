@@ -6,8 +6,8 @@ import RsvpForm from './rsvp/RsvpForm';
 import StDiv from '../shared/styled/StDiv';
 import StRsvpCard from './rsvp/StRsvpCard';
 import { Languages, hasRespondedKey } from '../shared/constants';
-import ResponseSentMessage from './rsvp/ResponseSentMessage';
 import GlobalDataContext from '../context/GlobalDataContext';
+import StResponseSentMessageContainer from './rsvp/StResponseSentMessageContainer';
 
 const Rsvp = () => {
   const [isMessageSent, setIsMessageSent] = useState(false);
@@ -20,7 +20,9 @@ const Rsvp = () => {
       <StRsvpCard fontSize={selectedLanguage && selectedLanguage === Languages.UA.code ? '35px' : '50px'}>
         <img src={Branch} className="branch" alt="branch" />
         {isMessageSent || localStorage.getItem(hasRespondedKey) === 'true' ? (
-          <ResponseSentMessage />
+          <StResponseSentMessageContainer
+            dangerouslySetInnerHTML={{ __html: themeValues.messageSent }}
+          ></StResponseSentMessageContainer>
         ) : (
           <>
             <StDiv

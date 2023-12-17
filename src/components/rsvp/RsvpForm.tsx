@@ -56,9 +56,9 @@ const RsvpForm = ({ setIsMessageSent }: RsvpFormProps) => {
             </StDiv>
             <StVerticalLine />
             <StDiv flex={2} id="form-group">
-              <InputField label={themeValues.numberOfGuests} name="numberOfGuests" width="250px" />
-              <InputField label={themeValues.guestNames} name="guestName" width="370px" />
-              <InputField label={themeValues.songRequest} name="songRequest" width="370px" />
+              <InputField label={themeValues.numberOfGuests} name="numberOfGuests" />
+              <InputField label={themeValues.guestNames} name="guestName" />
+              <InputField label={themeValues.songRequest} name="songRequest" />
               <StRsvpButton
                 fontSize={selectedLanguage === Languages.UA.code ? '25px' : '30px'}
                 onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

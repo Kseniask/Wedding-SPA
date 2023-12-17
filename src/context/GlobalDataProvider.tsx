@@ -15,6 +15,7 @@ const GlobalDataProvider = ({ children }: GlobalDataProviderProps) => {
   useEffect(() => {
     if (selectedLanguage) {
       setThemeValues(selectedLanguage === Languages.EN.code ? themeEnglish : themeUkrainian);
+      localStorage.setItem(selectedLanguageKey, selectedLanguage);
     } else {
       setSelectedLanguage(localStorage.getItem(selectedLanguageKey));
     }

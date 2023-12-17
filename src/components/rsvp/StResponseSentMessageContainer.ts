@@ -10,7 +10,7 @@ const StResponseSentMessageContainer = styled.div`
 
   span {
     margin-left: -10%;
-    font-family: 'Alex Brush';
+    font-family: 'Alex Brush', 'HandwritingCyrillic';
     font-size: 70px;
   }
 

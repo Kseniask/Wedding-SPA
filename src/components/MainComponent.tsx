@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import GlobalDataContext from '../context/GlobalDataContext';
-import { colorSystem, selectedLanguageKey } from '../shared/constants';
+import { colorSystem } from '../shared/constants';
 import { BeatLoader } from 'react-spinners';
 import StDiv from '../shared/styled/StDiv';
 import SaveTheDate from './SaveTheDate';
@@ -16,8 +16,7 @@ import LanguageSelectionModal from './LanguageSelectionModal';
 const MainComponent = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [show, setShow] = useState(true);
-  const { selectedLanguage, setSelectedLanguage } = useContext(GlobalDataContext);
-  const test = useMemo(() => localStorage.getItem(selectedLanguageKey), []);
+  const { selectedLanguage } = useContext(GlobalDataContext);
 
   useEffect(() => {
     console.log('selectedLanguage', selectedLanguage);
@@ -26,13 +25,10 @@ const MainComponent = () => {
       setShow(false);
       console.log('setting to false');
       setIsLoading(false);
-    } else if (test) {
-      setSelectedLanguage(test);
-      setIsLoading(false);
     } else {
       setIsLoading(false);
     }
-  }, [selectedLanguage, test]);
+  }, [selectedLanguage]);
 
   return (
     <StFlexBoxContainer margin="0 auto">
