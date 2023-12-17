@@ -34,7 +34,6 @@ const StRsvpCard = styled.div<StRsvpCardProps>`
   }
 
   #radio-group > div {
-    height: 100%;
     > div {
       margin-top: 6px;
     }
@@ -47,9 +46,24 @@ const StRsvpCard = styled.div<StRsvpCardProps>`
   }
 
   @media (max-width: 500px) {
-    width: auto;
+    width: 97%;
     left: 10px;
     right: 10px;
+    padding: 20px;
+
+    #radio-group > div {
+      margin: 0;
+      label {
+        font-size: 20px;
+
+        span {
+          font-size: 25px;
+        }
+      }
+      > div {
+        width: 20px;
+      }
+    }
   }
 
   @media (max-width: 1150px) {
@@ -64,9 +78,11 @@ const StRsvpCard = styled.div<StRsvpCardProps>`
     #radio-group {
       display: flex;
       > div {
+        height: 100%;
         flex: 1;
+
         > div {
-          width: 30px !important;
+          width: 30px;
         }
       }
     }
