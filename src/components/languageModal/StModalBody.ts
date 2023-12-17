@@ -21,6 +21,7 @@ const StModalBody = styled(Modal.Body)`
     border-radius: 3px;
     margin: 30px 15px;
     cursor: pointer;
+    padding: 0 10px;
   }
 `;
 export default StModalBody;

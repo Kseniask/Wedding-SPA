@@ -5,6 +5,7 @@ import { Languages, selectedLanguageKey } from '../shared/constants';
 import Language from '../types/Language';
 import StModalBody from './languageModal/StModalBody';
 import StModalHeader from './languageModal/StModalHeader';
+import StDiv from '../shared/styled/StDiv';
 
 interface LanguageSelectionModalProps {
   show: boolean;
@@ -22,15 +23,17 @@ const LanguageSelectionModal = ({ show, setShow }: LanguageSelectionModalProps) 
   return (
     <Modal show={show} aria-labelledby="language-selection">
       <StModalHeader>
-        <Modal.Title id="language-selection-title">Choose the language / Оберіть мову</Modal.Title>
+        <Modal.Title id="language-selection-title">
+          Choose the language / <span style={{ fontSize: '20px' }}>Оберіть мову</span>
+        </Modal.Title>
       </StModalHeader>
       <StModalBody>
-        <div className="language-option-btn" onClick={() => setLanguage(Languages.UA)}>
+        <StDiv fontSize="20px !important" className="language-option-btn" onClick={() => setLanguage(Languages.UA)}>
           {Languages.UA.fullname}
-        </div>
-        <div className="language-option-btn" onClick={() => setLanguage(Languages.EN)}>
+        </StDiv>
+        <StDiv className="language-option-btn" onClick={() => setLanguage(Languages.EN)}>
           {Languages.EN.fullname}
-        </div>
+        </StDiv>
       </StModalBody>
     </Modal>
   );
